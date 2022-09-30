@@ -5,30 +5,53 @@ class LayoutScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      children: [
-        const Icon(
-          Icons.account_circle,
-          size: 50,
-        ),
-        Column(
-          children: const [
-            Text(
-              'Flutter Mcflutter',
-              style: TextStyle(
-                fontSize: 50,
+    return Column(mainAxisAlignment: MainAxisAlignment.center, children: [
+      Row(
+        children: [
+          const Icon(
+            Icons.account_circle,
+            size: 60,
+          ),
+          Column(
+            mainAxisSize: MainAxisSize.min,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: const [
+              Text(
+                'Flutter Mcflutter',
+                style: TextStyle(
+                  fontSize: 40,
+                ),
               ),
-            ),
-            Text(
-              'Experienced App Developer',
-              style: TextStyle(
-                fontSize: 30,
+              Text(
+                'Experienced App Developer',
+                style: TextStyle(
+                  fontSize: 25,
+                ),
               ),
+            ],
+          ),
+        ],
+      ),
+      Row(
+        children: const [
+          Text(
+            '123 Main Street',
+            style: TextStyle(
+              fontSize: 10,
             ),
-          ],
-        ),
-      ],
-    );
+          ),
+          Spacer(
+            flex: 1,
+          ),
+          Text(
+            '(415) 555-0198',
+            style: TextStyle(
+              fontSize: 10,
+            ),
+          ),
+        ],
+      ),
+    ]);
   }
 }
 
